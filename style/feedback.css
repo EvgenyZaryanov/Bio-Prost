@@ -1,0 +1,127 @@
+.feedback {
+  width: 75px;
+  height: 70px;
+  position: fixed;
+  right: -15px;
+  top: 15%;
+  display: flex;
+  align-items: center;
+  background-color: red;
+  padding-left: 10px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+
+.feedback:hover {
+  right: 0;
+}
+
+.popup-window {
+  font-family: inherit;
+  width: 300px;
+  position: fixed;
+  right: 0%;
+  top: 12%;
+  padding: 35px 10px;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 2000;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+  right: -100%;
+}
+
+.popup-window form {
+  width: 100%;
+  min-height: auto;
+  padding: 0;
+  background: inherit;
+  box-shadow: none;
+}
+
+.popup-window label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.popup-window input {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+}
+
+.popup-window button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: red;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 15px;
+  border-radius: 20px;
+}
+
+.close-popup {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.close-popup:before {
+  content: '';
+  background: #333;
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  top: 13px;
+  left: 4px;
+  transform: rotate(-45deg);
+}
+
+.close-popup:after {
+  content: '';
+  background: #333;
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  top: 13px;
+  left: 4px;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 480px) {
+  .feedback {
+    width: 60px;
+    height: 40px;
+    padding-left: 7px;
+  }
+
+  .feedback img {
+    max-width: 30px;
+  }
+}
